@@ -8,15 +8,21 @@
 <body>
     <div class="container">
         <div class="formulario">
+            <!-- Campo para digitar o nome de usuário -->
             <input type="text" id="login" placeholder="Digite o usuario" required>
+            
+            <!-- Campo para digitar a senha -->
             <input type="password" id="senha" placeholder="Digite a senha" required>
+            
+            <!-- Botão para fazer login -->
             <button id="entrar">entrar</button>
+            
+            <!-- Mensagem de erro, caso o login falhe -->
             <p id="mensagem" style="color: red; font-weight: bold;"></p>
-
         </div>
     </div>
-    
 
+    <!-- Script responsável pela lógica de login -->
     <script src="js/login.js"></script>
 </body>
 </html>

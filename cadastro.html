@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Importa o CSS externo -->
 </head>
 <body>
     <div class="container">
-            <div class="formulario">
-                <input type="text" id="login" placeholder="Usuario" required>
-                <input type="text" id="senha" placeholder="Senha" required>
-                <input type="hidden" id="indexEditado">
-                <button id="btnCadastrar">Cadastrar</button>
-            </div>
-            <div class="tabela_usuarios">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Usuário</th>
-                            <th>Senha</th>
-                            <th>Operação</th>
-                        </tr>
+        <div class="formulario">
+            <!-- Campos para inserir o usuário e senha -->
+            <input type="text" id="login" placeholder="Usuario" required>
+            <input type="text" id="senha" placeholder="Senha" required>
+            
+            <!-- Campo oculto usado para edição (guardar o índice do usuário editado) -->
+            <input type="hidden" id="indexEditado">
+            
+            <!-- Botão para cadastrar ou atualizar -->
+            <button id="btnCadastrar">Cadastrar</button>
+        </div>
 
-                    </thead>
-                    <tbody id="lista_usuarios"></tbody>
-                </table>
-
-
-            </div>
+        <div class="tabela_usuarios">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Senha</th>
+                        <th>Operação</th> <!-- Ações: Editar ou Excluir -->
+                    </tr>
+                </thead>
+                <!-- Onde as linhas com os usuários serão inseridas dinamicamente -->
+                <tbody id="lista_usuarios"></tbody>
+            </table>
+        </div>
     </div>
 
+    <!-- Script responsável pela lógica de cadastro -->
     <script src="js/cadastro.js"></script>
 </body>
 </html>

@@ -6,6 +6,31 @@
     <title>Dashboard</title>
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Espaço onde vai aparecer o nome do usuário logado -->
+        <h1>Bem-vindo, <span id="nomeUsuario"></span>!</h1>
+
+        <!-- Botão para fazer logout -->
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <script>
+        // Verifica se há um usuário logado no localStorage
+        const usuarioLogado = localStorage.getItem("userLogado");
+
+        if (!usuarioLogado) {
+            // Se não estiver logado, redireciona para a página de login
+            window.location.href = "login.html";
+        } else {
+            // Se estiver logado, exibe o nome na tela
+            document.getElementById("nomeUsuario").textContent = usuarioLogado;
+        }
+
+        // Função para deslogar (remove o usuário logado e redireciona)
+        function logout() {
+            localStorage.removeItem("userLogado");
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
